@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     if (freePlace.length == 0) {
       result.textContent = 'Draw';
+      result.style.color = 'black'
       endGame.style.display = 'flex';
     }
     bot();
