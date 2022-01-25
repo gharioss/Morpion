@@ -24,15 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
     i.style.backgroundImage = "url('Images/x.png')";
     freePlace.splice(freePlace.indexOf(i.dataset.place), freePlace.indexOf(i.dataset.place) != -1 ? 1 : 0);
     if (array.includes('0') && array.includes('1') && array.includes('2') || array.includes('3') && array.includes('4') && array.includes('5') || array.includes('6') && array.includes('7') && array.includes('8') || array.includes('0') && array.includes('3') && array.includes('6') || array.includes('1') && array.includes('4') && array.includes('7') || array.includes('2') && array.includes('5') && array.includes('8') || array.includes('0') && array.includes('4') && array.includes('8') || array.includes('2') && array.includes('4') && array.includes('6')) {
-      endGame.style.display = 'flex';
       result.textContent = 'You won !!';
       result.style.color = 'green';
+      endGame.style.display = 'flex';
       niquesamere = true;
       return;
     };
+    if (freePlace.length == 0) {
+      result.textContent = 'Draw';
+      endGame.style.display = 'flex';
+    }
     bot();
   };
-
   function bot() {
     let availablePlace = freePlace.length;
     let randomPlace = Math.floor(Math.random() * availablePlace);
@@ -59,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     freePlace = ['0', '1', '2', '3', '4', '5', '6', '7', '8'];
     Array.from(document.getElementsByClassName('case')).forEach(y => {
       y.style.backgroundImage = "";
+      result.textContent = '';
       endGame.style.display = 'none';
     });
   });
