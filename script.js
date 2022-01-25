@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     array.push(i.dataset.place);
     i.style.backgroundImage = "url('Images/x.png')";
     freePlace.splice(freePlace.indexOf(i.dataset.place), freePlace.indexOf(i.dataset.place) != -1 ? 1 : 0);
-    if (array.includes('0') && array.includes('1') && array.includes('2') || array.includes('3') && array.includes('4') && array.includes('5') || array.includes('6') && array.includes('7') && array.includes('8') || array.includes('0') && array.includes('3') && array.includes('6') || array.includes('1') && array.includes('4') && array.includes('7') || array.includes('2') && array.includes('5') && array.includes('8') || array.includes('0') && array.includes('4') && array.includes('8') || array.includes('2') && array.includes('4') && array.incluzdes('6')) {
+    if (array.includes('0') && array.includes('1') && array.includes('2') || array.includes('3') && array.includes('4') && array.includes('5') || array.includes('6') && array.includes('7') && array.includes('8') || array.includes('0') && array.includes('3') && array.includes('6') || array.includes('1') && array.includes('4') && array.includes('7') || array.includes('2') && array.includes('5') && array.includes('8') || array.includes('0') && array.includes('4') && array.includes('8') || array.includes('2') && array.includes('4') && array.includes('6')) {
       endGame.style.display = 'flex';
       result.textContent = 'You won !!';
       result.style.color = 'green';
